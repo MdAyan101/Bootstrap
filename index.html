@@ -40,7 +40,7 @@
             
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>                
                 </span>
@@ -204,7 +204,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>  
                 <div class="col-12 col-sm align-self-center">
-                    <a id="reservebutton" role="button" class="btn btn-block nav-link btn-warning text-black" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <a id="reservebutton" role="button" class="btn btn-block nav-link btn-warning text-black" >Reserve Table</a>
                 </div>
                     
                 
@@ -378,6 +378,15 @@
               }
               
           });
+            
+          $("#loginButton").click(function(){
+             $("#loginModal").modal('show'); 
+          });
+          
+          $("#reservebutton").click(function(){
+             $("#reserveModal").modal('show'); 
+          });
+          
              
         });
     
